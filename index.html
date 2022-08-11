@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./tailwind/output.css" />
+    <title>Prime Propertise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="bg-white shadow-lg">
+      <!-- px-4 để căn lề trái của cả header -->
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- margin auto để dù có co giãn browser vẫn căn giữa -->
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+            <!-- space vs chữ Home -->
+            
+            <!--  -->
+           <div>
+              <a class="flex items-center py-4 px-2" href="#">
+              <!-- để icon nhà vs chữ Prime flex hàng ngang -->
+              <img class="h-8 w-8 mr-2" src="./public/img/house.png" alt="" />
+              <span class="font-semibold text-gray-500 text-lg">Prime Propertise</span>
+              </a>
+            </div> 
+            <!--  -->
+            <!-- Xác định các thẻ div muốn đặt vị trí ở đâu để đóng thẻ /div cho chuẩn. muốn đoạn dưới gần lại nên 
+            đóng thẻ ở dưới Contact -->
+            <!-- xác định là thẻ inline hay block để chữ đứng cạnh img đc -->
+                <!-- nghĩ xem nó là thẻ j, xếp bên cạnh thì dùng thẻ inline hay block? -->
+
+                <!--  -->
+            <div class="hidden md:flex items-center space-x-3">
+            <!-- các chữ cách nhau 3px theo trục x
+               nếu ko ở medium size thì sẽ ẩn đi, bth sẽ là flex -->
+            <a class="py-4 px-2 border-green-500 border-b-4 text-green-500 font-semibold" href="">Home</a>
+            <!-- padding theo trục x, y -->
+            <a class="py-4 px-2  text-gray-500 font-semibold hover:text-green-500 transition duration-300 href="">Service</a>
+            <!-- muốn thay đổi j thì vào class của cái đấy để thay đổi  -->
+            <a class="py-4 px-2  text-gray-500 font-semibold  hover:text-green-500 transition duration-300  href="">About</a>
+            <a class="py-4 px-2  text-gray-500 font-semibold  hover:text-green-500 transition duration-300  href="">Contact Us</a>
+          </div>
+        <!--  -->
+      </div>
+    </nav>
+
+
+    <!-- site baner -->
+<main class="mt-10 px-4 md:mt-16">
+  <div class="sm:text-center lg:text-left">
+    <!-- màn hình nhỏ thì ở trung tâm, màn hình lớn thì bên trái -->
+    <!-- chỉ có chữ thẻ span, p mới căn trái khi màn hình to. 
+    thẻ a href ko phải chữ  -->
+    <h1 class="tracking-tight font-extrabold text-4xl sm:text-5xl nd:text-6xl">
+      <!-- khoảng cách giữa các từ -->
+      <span class="block">Premium Properties</span>
+      <span class="block text-green-500">Non-premium Prices</span>
+      <!-- để 2 thẻ block thì chữ sẽ nằm riêng 1 hàng khác nhau -->
+    </h1>
+    <!-- vì 2 chữ màu khác nhau nên phải tạo ra 2 thẻ span -->
+    <p class="mt-3 text-base text-gray-500 md:text-xl md:mt-5 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0">At prime properties, we ensure that our clients get the best our priority and budget is our constrain. Pick and choose from 1000+ properties</p>
+         <!-responsive ở các màn hình khác nhau-  -->
+
+         <!-- container cho button -->
+      <div class="mt-5 sm:mt-8 sm:flex sm:justify-center">  
+         <!--flex hàng dọc 2 chữ thành hàng ngang  -->
+   
+         <div class="md:m-3">
+           <a class="flex justify-center rounded-md bg-green-500 text-white px-8 py-3" href="">View properties</a>
+            <!-- từ chữ để tạo thành button thì tạo ra px, py ròi flex nó ra trung tâm -->
+         </div>
+        
+         <div class="md:m-3">
+          <a class="flex justify-center rounded-md bg-green-100 text-green-700 px-8 py-3" href="">Explore location</a>
+         </div>
+      </div>  
+                     <!-- khu vực của 2 button -->
+  </div>  
+</main>
+
+    <div class="mt-5 flex p-10 justify-center">
+      <h2 class="text-3xl text-gray-500 mb-2"> Recent Properties</h2>
+     </div>
+    </div>
+
+
+     <!-- card section -->
+     <!-- phân tích: gồm có container bao quanh tất cả card, muốn responsive ở màn hình to nhìn 3 ảnh, màn hình nhỏ nhìn đc 1 ảnh -->
+    
+     <!-- card container -->
+     <div class="grid p-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 ">
+      <!-- dàn hàng ngang cho 3 ảnh ở các màn hình khác nhau, số cột -->
+
+      <!-- card sẽ gồm div, dưới là img , rồi đến div Orchid, tiếp là div Giá-->
+
+      <!-- nhà 1 -->
+      
+      <div class="rounded mr-4 overflow-hidden shadow-lg">
+        <img class="w-full" src="./public/img/home1.jpg" alt="home 1">
+        <!-- ảnh full width -->
+
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Tuyen Lam Villa</div>
+          <p class="text-gray-700">Located in the suburb of Vung Tau, offers green lighting and a rainwater harvesting system, this property is eco-friendly.</p>
+        </div>  
+        
+        <!-- nhìn bản gốc thấy có padding, phải để cùng vs px-6 ở trên cho thẳng hàng
+        div ở trên cho cả chữ và price -->
+        <div class="px-6 pt-4 pb-2">
+          <span class="text-green-300 font-bold text-lg px-3 py-1 mr-2 mb-2">$4,200,000</span>
+        </div>
+        <!-- muốn style từng cái nên để div ở mỗi nơi muốn chỉnh sửa -->
+
+        <!-- phần ở dưới này cũng phải giống thông số ở trên -->
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">7 Beds</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">7 Baths</span>
+        </div>
+
+         <!-- Style giống nhau thì copy paste cho nhanh -->
+
+        <div class="px-6 pt-4 pb-10">
+           <button class="inline-block bg-green-300 rounded-full px-4 py-1 text-sm font-bold text-white mr-2 mb-2">View Property</button>
+        </div>
+      </div>  
+            <!-- nhà 1 -->
+
+
+      <!-- nhà 2 -->
+      <div class="rounded mr-4 overflow-hidden shadow-lg">
+        <img class="w-full" src="./public/img/home2.jpg" alt="home 1">
+        <!-- ảnh full width -->
+
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Melody Hoi An Villa</div>
+          <p class="text-gray-700">Melody Hoi An Villa is a stunning property in a wonderful location on the Con Dao island of VietNam.</p>
+        </div>  
+        
+ 
+        <div class="px-6 pt-4 pb-2">
+          <span class="text-green-300 font-bold text-lg px-3 py-1 mr-2 mb-2">$5,100,000</span>
+        </div>
+       
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">9 Beds</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">9 Baths</span>
+        </div>
+
+
+        <div class="px-6 pt-4 pb-10">
+           <button class="inline-block bg-green-300 rounded-full px-4 py-1 text-sm font-bold text-white mr-2 mb-2">View Property</button>
+        </div>
+      </div>  
+
+      
+      <!-- nhà 2 -->
+
+
+      <!-- nhà 3 -->
+
+     <div class="rounded mr-4 overflow-hidden shadow-lg">
+        <img class="w-full" src="./public/img/home3.jpg" alt="home 1">
+        <!-- ảnh full width -->
+
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Que Toi Villa</div>
+          <p class="text-gray-700">Located at the top of a hill, the villa is built sparing luxury. On the outside, the private pool is surrounded by a lush garden looking out to a magnificent view of isle Con Dao.</p>
+        </div>  
+        
+               <div class="px-6 pt-4 pb-2">
+          <span class="text-green-300 font-bold text-lg px-3 py-1 mr-2 mb-2">$3,400,000</span>
+        </div>
+       
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">5 Beds</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">5 Baths</span>
+        </div>
+
+
+        <div class="px-6 pt-4 pb-10">
+           <button class="inline-block bg-green-300 rounded-full px-4 py-1 text-sm font-bold text-white mr-2 mb-2">View Property</button>
+        </div>
+      </div>  
+     </div> 
+
+      <!--nhà 3  -->
+      
+
+      <!-- Banner -->
+    <div class="py-20 h-screen bg-no-repeat" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5) ), url('public/img/luxury.jpg')">  
+     <!-- h-screen thì dù có co giãn ntn nó vẫn theo chiều cao cố định -->
+     <!-- trong thẻ div này class và style khác nhau, ngăn cách bởi " " -->
+      <div class="container mx-auto px-6 mt-40" >
+        <h2 class="text-4xl font-bold text-white mb-2">Experience Luxury Like Never Before</h2>
+        <h3 class="text-2xl mb-8 text-gray-300">50+ Exotic loctaions accross the globe</h3>
+        <button class="text-white shadow-lg uppercase border-4 px-8 py-4 font-bold tracking-wider">Explore Location</button>
+      </div> 
+     </div> 
+     
+    
+
+
+<!--  -->
+     <div class="mt-10 flex p-10 justify-center">
+      <h2 class="text-3xl text-gray-500 mb-2"> Loctaions </h2>
+     </div>
+
+<!--  Another Card Section-->
+
+ <!-- card section -->
+     <!-- phân tích: gồm có container bao quanh tất cả card, muốn responsive ở màn hình to nhìn 3 ảnh, màn hình nhỏ nhìn đc 1 ảnh -->
+    
+     <!-- card container -->
+     <div class="grid p-10 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+      <!-- dàn hàng ngang cho 3 ảnh ở các màn hình khác nhau, số cột -->
+
+      <!-- card sẽ gồm div, dưới là img , rồi đến div Orchid, tiếp là div Giá-->
+
+      <!-- nhà 1 -->
+      
+      <div class="rounded mr-4 overflow-hidden shadow-lg">
+        <img class="w-full" src="./public/img/jet-dela-cruz-In5ENUxUrO8-unsplash-min.jpeg" alt="location 1">
+        <!-- ảnh full width -->
+
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Da Nang</div>
+          <p class="text-gray-700">Da Nang marks the halfway point between Hanoi in the north and Ho Chi Minh City in the south. It’s the 4th largest city in Vietnam. Apart from some shopping highlights and historical sights, the main reason for most travellers staying here is its proximity to the well-known My Khe Beach, Lang Co Beach, Hoi An and My Son.</p>
+        </div>  
+       </div> 
+        
+        <!-- nhìn bản gốc thấy có padding, phải để cùng vs px-6 ở trên cho thẳng hàng
+        div ở trên cho cả chữ và price -->
+       
+      <div class="rounded mr-5 overflow-hidden shadow-lg">
+        <img class="w-full" src="./public/img/tony-pham-jWECaopdAH8-unsplash-min.jpeg">
+        <!-- ảnh full width -->
+
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Sai Gon</div>
+          <p class="text-gray-700">Saigon – is one of the best places to visit in Vietnam. From delicious food to beautiful French architecture to an up-and-coming craft beer scene, you’ll find no lack of things to do in Ho Chi Minh City.</p>
+        </div>
+       </div> 
+  
+        <div class="rounded mr-4 overflow-hidden shadow-lg">
+        <img class="w-full" src="./public/img/tony-pham-WykFLHcscSo-unsplash-min.jpeg" alt="location 1">
+        <!-- ảnh full width -->
+
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Ha Noi</div>
+          <p class="text-gray-700">Hanoi, located on the banks of the Red River, is one of the world’s most ancient capitals. The moment you arrive in the Vietnamese capital, you’ll find streets within the city centre where well-preserved colonial buildings, ancient pagodas, and unique museums stand proud.</p>
+        </div>  
+
+      </div> 
+    </div>  
+      
+
+         <!-- Banner -->
+    <div class="py-20" style="background: linear-gradient(rgba(77, 191, 73, 0.5),rgba(75, 134, 79, 0.5) )">  
+     <!-- h-screen thì dù có co giãn ntn nó vẫn theo chiều cao cố định -->
+     <!-- trong thẻ div này class và style khác nhau, ngăn cách bởi " " -->
+      <div class="container mx-auto px-6" >
+        <h2 class="text-5xl font-bold text-white mb-2">Save upto 50% on broker comisions</h2>
+        <h3 class="text-3xl mb-8 text-gray-500">Lowest brokerage fees</h3>
+        <button class="text-white rounded-2xl shadow-lg uppercase border-4 px-8 py-4 font-bold tracking-wider">Enquire</button>
+      </div> 
+     </div> 
+
+
+     <!-- Banner -->
+       <div class="mt-5 flex p-10 justify-center">
+      <h2 class="text-3xl text-gray-500 mb-2"> What clients say about us?</h2>
+     </div>
+
+     <!--  -->
+
+     <div class="p-10 grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+      <div class="shadow-lg bg-white rounded-xl p-4">
+        <p class="text-gray-600">
+          <span class="text-green-500 text-lg font-bold">"</span>
+We were thrilled when you found this wonderful home for us. It is more than we had hoped for, and we truly feel that we have come home to roost.          <span class="text-green-500 text-lg font-bold">"</span>
+        </p>
+        <div class="flex bg-green-100 items-center rounded-full">
+          <a href="" class="block relative">
+            <img class="h-10 w-10 rounded-full mx-auto" src="public/img/avatar.png" alt="">
+          </a>
+          <div class="flex flex-col ml-2 justify-between" >
+            <span class="text-sm text-green-500 font-semibold">Quan</span>
+            <span class="text-xs">Directory</span>
+            <!-- thẻ span inline nên sẽ dàn hàng ngang -->
+          </div>
+         </div>
+      </div>
+
+      <!--  -->
+      <div class="shadow-lg bg-white rounded-xl p-4">
+        <p class="text-gray-600">
+          <span class="text-green-500 text-lg font-bold">"</span>
+You delivered incredible service in finding such a light and spacious place for us. It is so roomy and comfortable, and it has felt like home from the very first day          <span class="text-green-500 text-lg font-bold">"</span>
+        </p>
+        <div class="flex bg-green-100 items-center rounded-full">
+          <a href="" class="block relative">
+            <img class="h-10 w-10 rounded-full mx-auto" src="public/img/avatar.png" alt="">
+          </a>
+          <div class="flex flex-col ml-2 justify-between" >
+            <span class="text-sm text-green-500 font-semibold">Joah</span>
+            <span class="text-xs">Chef</span>
+            <!-- thẻ span inline nên sẽ dàn hàng ngang -->
+          </div>
+         </div>
+      </div>
+
+      <div class="shadow-lg bg-white rounded-xl p-4">
+        <p class="text-gray-600">
+          <span class="text-green-500 text-lg font-bold">"</span>
+Your personal warmth and interest in us took all the trepidation out of purchasing our first home. You made it a real pleasure, as you took us through the process step by step.          <span class="text-green-500 text-lg font-bold">"</span>
+        </p>
+        <div class="flex bg-green-100 items-center rounded-full">
+          <a href="" class="block relative">
+            <img class="h-10 w-10 rounded-full mx-auto" src="public/img/avatar.png" alt="">
+          </a>
+          <div class="flex flex-col ml-2 justify-between" >
+            <span class="text-sm text-green-500 font-semibold">Sunny</span>
+            <span class="text-xs">Officer</span>
+            <!-- thẻ span inline nên sẽ dàn hàng ngang -->
+          </div>
+         </div>
+      </div>
+    </div>
+
+     
+       
+      <!-- Contact -->
+       <div class="mt-5 flex p-10 justify-center">
+      <h2 class="text-3xl text-gray-500 mb-2">Contact</h2>
+     </div>
+
+     <div class="bg-green-300 mt-5 flex p-10 justify-center items-center">
+      <form class="w-full max-w-lg">
+        <!-- muốn form căng hết chiều rộng  -->
+
+        <!-- vì là 2 thẻ block nên nó sẽ xếp chồng lên nhau, muốn dàn ngang thì cho vào 1 div rồi flex -->
+
+        <div class="flex flex-wrap mb-6">
+          <!-- phải để flex-wrap vì khi co lại màn hình
+          khi kích thước container thay đổi và tổng chiều rộng các items cộng lại lớn hơn chiều rộng của container bọc ngoài thì nó sẽ rớt xuống. -->
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase text-xs text-gray-700 font-bold mb-2 tracking-wider">First Name</label>
+           <input type="text" class="block mb-3 w-full border-green-500 text-gray-700 py-3 px-4 rounded" placeholder="Quan">
+           <!-- để first name lên trên input thì 2 thẻ phải là block -->
+            <p class="text-sm text-gray-500 italic">Please fill out this field</p>
+          </div>
+
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+             <label class="block uppercase text-xs text-gray-700 font-bold mb-2 tracking-wider">Last Name</label>
+              <input type="text" class="block w-full border-green-500 text-gray-700 py-3 px-4 rounded" placeholder="Hoang">
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="w-full px-3">
+            <label class="block uppercase text-xs text-gray-700 font-bold mb-2 tracking-wider">Email</label>
+            <input type="text" class="block w-full border-green-500 text-gray-700 py-3 px-4 rounded" placeholder="Example@gmail.com">
+             <p class="text-sm mt-3 text-gray-500 italic">Some tips - as long as needed </p>
+
+          </div>
+
+        </div>
+      
+
+        <div class="flex mt-3">
+          <div class="w-full px-3">
+            <label class="block uppercase text-xs text-gray-700 font-bold mb-2 tracking-wider">Messsage</label>
+            <textarea class="no-resize resize-none h-48 appearance-none block w-full border-green-500 text-gray-700 py-3 px-4 rounded" placeholder=""></textarea>
+             <p class="text-sm mt-3 text-gray-500 italic"> Please fill out this field </p>
+
+          </div>
+       </div>
+
+          <!-- Send button -->
+        <div class="md:flex md:items-center py-3">
+          <!-- để Send button thẳng hàng vs các cột trên thì để flex ở size medium -->
+            <div class="md:w-1/3">
+              <button class="shadow bg-green-500 text-white py-2 px-4 mx-2 rounded">Send</button>
+            </div>
+        </div>
+      </div>
+
+      </form>
+     </div>
+
+     <!-- footer -->
+
+     <footer class="pt-10 px-4 py-10">
+      <div class="container flex flex-col justify-between mx-auto space-y-8">
+        <!-- container chung cho cả footer -->
+        <!-- muốn căn giữa thì phải lấy từ class container, phải xác định nó từ thẻ cha nào để flex -->
+
+        <!-- icon và Prime -->
+        <div>
+          <a href="" class="flex justify-center">
+            <!-- justify between để giãn các block ra, còn muốn căn giữa thì phải vào riêng thẻ này -->
+            <div class="flex w-12 h-12">
+              <img src="./public/img/house.png" class="h-8 w-8 mr-2" alt="">
+            </div>
+            <span class="font-semibold text-gray-500 text-2xl">
+              Prime Properties
+            </span>
+          </a>
+
+        </div>
+                <!-- icon và Prime -->
+
+                <!--Phần cuối -->
+
+            <div class="grid grid-cols-2 gap-x gap-y-8 text-sm sm:grid-cols-4">
+                <div class="space-y-3">
+                    <h3 class="text-green-500 uppercase tracking-wide">Product</h3>
+                  <!-- trình tự tạo ra mục lục bên trong thẻ li ntn -->
+                  <ul class="space-y-1" >
+                    <!-- tạo khoảng cách giữa các từ theo trục dọc -->
+                      <li>
+                       <a href="">Features</a>
+                      </li>
+                      <li>
+                       <a href="">Integrations</a>
+                     </li>
+                    <li>
+                      <a href="">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="">FAQs</a>
+                    </li>
+                  </ul>
+                </div>
+
+
+                  <div class="space-y-3">
+                    <h3 class="text-green-500 uppercase tracking-wide">Company</h3>
+                   <ul class="space-y-1">
+                    <li>
+                      <a href="">Features</a>
+                    </li>
+                    <li>
+                      <a href="">Integrations</a>
+                     </li>
+                   </ul>
+                   </div>
+
+               <div class="space-y-3">
+                    <h3 class="text-green-500 uppercase tracking-wide">Developer</h3>
+                   <ul class="space-y-1">
+                    <li>
+                      <a href="">Public API</a>
+                    </li>
+                    <li>
+                      <a href="">Guides</a>
+                     </li>
+                  </ul>
+                 </div>
+
+                    <div class="space-y-3">
+                      <h3 class="text-green-500 uppercase tracking-wide">Social media</h3>
+
+                                            <!-- thẻ chung của 2 icon -->
+                     <div class="flex justify-start space-x-3">
+                      <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><path fill="#03A9F4" d="M42 12.429a14.978 14.978 0 0 1-4.247 1.162 7.38 7.38 0 0 0 3.251-4.058 14.829 14.829 0 0 1-4.693 1.776A7.377 7.377 0 0 0 30.926 9c-4.08 0-7.387 3.278-7.387 7.32 0 .572.067 1.129.193 1.67a21.05 21.05 0 0 1-15.224-7.654 7.23 7.23 0 0 0-1 3.686c0 2.541 1.301 4.778 3.285 6.096a7.52 7.52 0 0 1-3.349-.914v.086c0 3.551 2.547 6.508 5.923 7.181a7.346 7.346 0 0 1-1.941.263c-.477 0-.942-.054-1.392-.135.94 2.902 3.667 5.023 6.898 5.086a14.925 14.925 0 0 1-9.174 3.134 14.61 14.61 0 0 1-1.761-.104A21.109 21.109 0 0 0 17.321 38c13.585 0 21.017-11.156 21.017-20.834 0-.317-.01-.633-.025-.945A14.532 14.532 0 0 0 42 12.429"/></svg>
+                                          </a>
+                      <!-- icon sẽ dàn hàng từ trái sang, vì click đc nên sẽ gồm thẻ link -->
+                      <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><path fill="#039be5" d="M24 5a19 19 0 1 0 0 38 19 19 0 1 0 0-38Z"/><path fill="#fff" d="M26.572 29.036h4.917l.772-4.995h-5.69v-2.73c0-2.075.678-3.915 2.619-3.915h3.119v-4.359c-.548-.074-1.707-.236-3.897-.236-4.573 0-7.254 2.415-7.254 7.917v3.323h-4.701v4.995h4.701v13.729c.931.14 1.874.235 2.842.235.875 0 1.729-.08 2.572-.194v-13.77z"/></svg>                      </a>
+                    </div>
+                  </div>
+                   </div>
+                 </div>
+             
+                   <!-- đóng mở thẻ div phải chuẩn nếu ko nó sẽ ngắt lung tung, ko phải cứ đóng nhiều là đc -->
+               
+            
+     </footer>
+
+    </body>
+</html>
+  
+   
+
+
+
